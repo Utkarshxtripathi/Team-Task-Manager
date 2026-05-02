@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Background Colors */
+  --color-base: #0A0B0F;
+  --color-shell: #10121A;
+  --color-panel: #161927;
+  --color-card: #1E2235;
+  --color-hover: #252A3D;
+  --color-active: #2D3250;
+
+  /* Accent Colors */
+  --color-violet: #7B5EF6;
+  --color-violet-light: #9B7BFF;
+  --color-teal: #2EC4B6;
+  --color-amber: #F4A623;
+  --color-red: #EF4444;
+  --color-green: #22C55E;
+
+  /* Text Colors */
+  --color-t-primary: #F0F0FF;
+  --color-t-secondary: #B8BCDA;
+  --color-t-muted: #757A9A;
+  --color-t-disabled: #3E4260;
+
+  /* Border Colors */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* Border Radius */
+  --radius-badge: 4px;
+  --radius-input: 6px;
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-modal: 16px;
+
+  /* Gradients */
+  --background-image-grad-cta: linear-gradient(135deg, #7B5EF6, #6040E8);
+  --background-image-grad-strip: linear-gradient(90deg, #7B5EF6, #2EC4B6);
+
+  /* Spacing */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark; /* Dark mode only */
+  }
+
+  body {
+    background-color: var(--color-base);
+    color: var(--color-t-primary);
+    font-family: var(--font-sans);
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  /* Headings based on Design Doc */
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1.68px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.24px;
+  }
+}
