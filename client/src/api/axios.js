@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api', // Pointing to backend
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
 });
 
-// Interceptor to inject JWT token into request headers
+// JWT interceptor
 api.interceptors.request.use(
   (config) => {
     const user = JSON.parse(localStorage.getItem('user'));
