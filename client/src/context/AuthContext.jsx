@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
   try {
-    const response = await api.post('/api/auth/login', { email, password });
+    const response = await api.post('/auth/login', { email, password });
     if (!response.data) {
       throw new Error('Invalid response from server');
     }
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 };
 
 const signup = async (name, email, password) => {
-  const response = await api.post('/api/auth/register', { name, email, password });
+  const response = await api.post('/auth/register', { name, email, password });
   setUser(response.data);
   localStorage.setItem('user', JSON.stringify(response.data));
   return response.data;
